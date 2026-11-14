@@ -42,48 +42,48 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 relative border-t border-slate-800/80 bg-[#0a0f1d]">
+    <section id="contact" className="py-16 sm:py-20 relative border-t border-slate-800/80 bg-[#0a0f1d]">
       {/* Background glow */}
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-400 text-xs font-mono">
+        <div className="flex flex-col items-center text-center mb-12 sm:mb-16 space-y-2.5 sm:space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-400 text-[11px] sm:text-xs font-mono">
             <Mail className="w-3.5 h-3.5" />
             <span>LET'S CONNECT</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-bold text-white tracking-tight">
             Have a Project or Opportunity? Let's Talk.
           </h2>
-          <p className="text-slate-400 max-w-2xl text-sm sm:text-base">
+          <p className="text-slate-400 max-w-2xl text-xs sm:text-base px-2">
             Whether you want to discuss Computer Vision, AI integrations, full-stack development, or full-time roles, feel free to reach out.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10">
           
           {/* Left Column: Direct Contact Info */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-6 shadow-xl">
+          <div className="lg:col-span-5 space-y-4 sm:space-y-6">
+            <div className="glass-panel p-5 sm:p-8 rounded-xl sm:rounded-2xl border border-slate-800 space-y-4 sm:space-y-6 shadow-xl">
               <div>
-                <h3 className="text-xl font-bold text-white">Contact Details</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-white">Contact Details</h3>
                 <p className="text-xs text-slate-400 mt-1">Available for freelance, contracts, and full-time positions.</p>
               </div>
 
               {/* Direct Channels */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 
                 {/* Email with copy */}
-                <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between gap-3 group">
-                  <div className="flex items-center gap-3 overflow-hidden">
-                    <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
-                      <Mail className="w-5 h-5" />
+                <div className="p-3.5 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between gap-2.5 sm:gap-3 group">
+                  <div className="flex items-center gap-3 overflow-hidden min-w-0">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+                      <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
-                    <div className="truncate">
-                      <div className="text-xs text-slate-400 font-mono">Email Address</div>
-                      <a href={`mailto:${personalInfo.email}`} className="text-sm font-semibold text-white hover:text-blue-300 truncate block">
+                    <div className="truncate min-w-0">
+                      <div className="text-[10px] sm:text-xs text-slate-400 font-mono">Email Address</div>
+                      <a href={`mailto:${personalInfo.email}`} className="text-xs sm:text-sm font-semibold text-white hover:text-blue-300 truncate block">
                         {personalInfo.email}
                       </a>
                     </div>
@@ -98,14 +98,14 @@ export default function Contact() {
                 </div>
 
                 {/* WhatsApp */}
-                <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
-                      <MessageSquare className="w-5 h-5" />
+                <div className="p-3.5 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between gap-2.5 sm:gap-3">
+                  <div className="flex items-center gap-3 overflow-hidden">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                      <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
-                    <div>
-                      <div className="text-xs text-slate-400 font-mono">WhatsApp Messenger</div>
-                      <div className="text-sm font-semibold text-white">{personalInfo.phone}</div>
+                    <div className="truncate">
+                      <div className="text-[10px] sm:text-xs text-slate-400 font-mono">WhatsApp Messenger</div>
+                      <div className="text-xs sm:text-sm font-semibold text-white">{personalInfo.phone}</div>
                     </div>
                   </div>
                   <a
@@ -119,26 +119,26 @@ export default function Contact() {
                 </div>
 
                 {/* Phone */}
-                <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
-                    <Phone className="w-5 h-5" />
+                <div className="p-3.5 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <div className="text-xs text-slate-400 font-mono">Phone Direct</div>
-                    <a href={`tel:${personalInfo.phone.replace(/[^0-9+]/g, '')}`} className="text-sm font-semibold text-white hover:text-blue-300">
+                    <div className="text-[10px] sm:text-xs text-slate-400 font-mono">Phone Direct</div>
+                    <a href={`tel:${personalInfo.phone.replace(/[^0-9+]/g, '')}`} className="text-xs sm:text-sm font-semibold text-white hover:text-blue-300">
                       {personalInfo.phone}
                     </a>
                   </div>
                 </div>
 
                 {/* Location */}
-                <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0">
-                    <MapPin className="w-5 h-5" />
+                <div className="p-3.5 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0">
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
-                    <div className="text-xs text-slate-400 font-mono">Location</div>
-                    <div className="text-sm font-semibold text-white">{personalInfo.location}</div>
+                    <div className="text-[10px] sm:text-xs text-slate-400 font-mono">Location</div>
+                    <div className="text-xs sm:text-sm font-semibold text-white">{personalInfo.location}</div>
                   </div>
                 </div>
 
@@ -148,13 +148,13 @@ export default function Contact() {
 
           {/* Right Column: Interactive Contact Form */}
           <div className="lg:col-span-7">
-            <div className="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 shadow-xl">
-              <h3 className="text-xl font-bold text-white mb-2">Send a Message</h3>
-              <p className="text-xs text-slate-400 mb-6">Fills your email client directly with all message details.</p>
+            <div className="glass-panel p-5 sm:p-8 rounded-xl sm:rounded-2xl border border-slate-800 shadow-xl">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-1.5">Send a Message</h3>
+              <p className="text-xs text-slate-400 mb-5 sm:mb-6">Fills your email client directly with all message details.</p>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
+              <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+                  <div className="space-y-1">
                     <label className="text-xs font-mono text-slate-300">Your Name</label>
                     <input
                       type="text"
@@ -162,11 +162,11 @@ export default function Contact() {
                       placeholder="e.g. John Doe"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-blue-400 text-sm transition-all"
+                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-blue-400 text-base sm:text-sm transition-all"
                     />
                   </div>
 
-                  <div className="space-y-1.5">
+                  <div className="space-y-1">
                     <label className="text-xs font-mono text-slate-300">Your Email</label>
                     <input
                       type="email"
@@ -174,12 +174,12 @@ export default function Contact() {
                       placeholder="john@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-blue-400 text-sm transition-all"
+                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-blue-400 text-base sm:text-sm transition-all"
                     />
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
+                <div className="space-y-1">
                   <label className="text-xs font-mono text-slate-300">Subject</label>
                   <input
                     type="text"
@@ -187,11 +187,11 @@ export default function Contact() {
                     placeholder="AI Project Collaboration / Job Opportunity"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-blue-400 text-sm transition-all"
+                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-blue-400 text-base sm:text-sm transition-all"
                   />
                 </div>
 
-                <div className="space-y-1.5">
+                <div className="space-y-1">
                   <label className="text-xs font-mono text-slate-300">Message</label>
                   <textarea
                     rows={4}
@@ -199,13 +199,13 @@ export default function Contact() {
                     placeholder="Describe your project, timeline, or position details..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-blue-400 text-sm transition-all"
+                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-blue-400 text-base sm:text-sm transition-all"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25"
+                  className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 text-sm sm:text-base"
                 >
                   <Send className="w-4 h-4" />
                   <span>Send Message via Email</span>
