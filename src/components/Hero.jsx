@@ -28,7 +28,7 @@ export default function Hero() {
               <span className="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-sky-300 mt-1 sm:mt-0">
                 {personalInfo.name}
               </span>
-              <span className="text-blue-500">.</span>
+              
             </h1>
 
             {/* Sub-headline */}
