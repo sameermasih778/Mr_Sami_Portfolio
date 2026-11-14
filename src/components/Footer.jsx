@@ -14,7 +14,7 @@ export default function Footer() {
           
           {/* Logo & Identity */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
               <Terminal className="w-4 h-4" />
             </div>
             <div>
@@ -65,8 +65,9 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
           </p>
-          <p className="flex items-center gap-1 font-mono">
-            Corporate Deep Slate Edition • Engineered with React, Tailwind CSS & Vite
+          <p className="flex items-center gap-2 font-mono text-slate-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block animate-pulse" />
+            Bridging Computer Vision, AI & Scalable Web Engineering
           </p>
         </div>
       </div>
